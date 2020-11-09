@@ -34,6 +34,7 @@ con.connect(function(err) {
 
 bot.once('ready', () => {
     console.log('Anigami is Here!');
+    bot.user.setActivity('Mihoyo 1.1 Update Countdown.', {type: 'WATCHING'}
     var minute = 1000 * 60;
     setInterval(() => {
         con.query(`UPDATE USERDATA SET RESIN=RESIN + 1 WHERE RESIN < 120`);
